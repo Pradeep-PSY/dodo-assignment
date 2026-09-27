@@ -49,7 +49,6 @@ function App() {
 
   const sessionId = useMemo(() => {
     const params = new URLSearchParams(window.location.search);
-    console.log("Session ID:", params); // Log the session ID for debugging
     return params.get("session_id") || "demo-session";
   }, []);
 
@@ -435,7 +434,6 @@ function App() {
           </div>
         )}
 
-        
       </div>
     </div>
   );

@@ -171,7 +171,6 @@ function App() {
       })),
     }
 
-    console.log('Hosted checkout session metadata:', sessionMetadata)
 
     setCheckoutInProgress(true)
     setPaymentMessage('Opening secure checkout...')

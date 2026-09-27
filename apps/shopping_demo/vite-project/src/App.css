@@ -309,8 +309,8 @@
 }
 
 .secondary-button {
-  background: rgba(255, 255, 255, 0.04);
-  color: #faf5ff;
+   background: #ebe6df;
+  color: #c5a880;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -321,6 +321,7 @@
 }
 
 .primary-button:hover,
+.secondary-button:hover,
 .checkout-button:hover {
   background: #c5a880;
   color: #ebe6df;
