@@ -159,3 +159,67 @@ The complete flow is:
 
 This matches the expected hosted-checkout pattern where the storefront remains in control of product and cart data while the payment experience is kept in a dedicated secure checkout page.
 
+## Run locally
+
+### 1. Install dependencies
+
+From the root of the project folder:
+
+```bash
+cd apps/shopping_demo/vite-project
+npm install
+
+cd ../../checkout_page/vite-project
+npm install
+```
+
+### 2. Start the storefront app
+
+```bash
+cd apps/shopping_demo/vite-project
+npm run dev
+```
+
+This usually runs on:
+
+```text
+http://localhost:5173
+```
+
+### 3. Start the hosted checkout app
+
+Open a second terminal and run:
+
+```bash
+cd apps/checkout_page/vite-project
+npm run dev
+```
+
+This usually runs on:
+
+```text
+http://localhost:5174
+```
+
+### 4. Test the flow
+
+1. Open the storefront at `http://localhost:5173`
+2. Pick a product and add it to the cart
+3. Click `Make a payment`
+4. The app opens the hosted checkout page and shows the payment form
+5. Use one of the demo cards listed in the checkout page to simulate success or failure
+
+> Note: Because the hosted checkout is opened using a separate URL, both apps need to be running at the same time for the full flow to work.
+
+### 5. Production build check
+
+You can verify both apps build correctly with:
+
+```bash
+cd apps/shopping_demo/vite-project
+npm run build
+
+cd ../../checkout_page/vite-project
+npm run build
+```
+
