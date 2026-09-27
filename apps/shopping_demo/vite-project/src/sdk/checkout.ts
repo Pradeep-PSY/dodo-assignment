@@ -76,7 +76,7 @@ interface ActiveCheckoutState {
 
 export class Checkout {
   static active: ActiveCheckoutState | null = null;
-  static readonly DEFAULT_CHECKOUT_URL = 'http://localhost:5173/index.html';
+  static readonly DEFAULT_CHECKOUT_URL = 'https://checkout-page-eta.vercel.app/';
 
   static assertBrowser(): void {
     if (typeof window === 'undefined' || typeof document === 'undefined') {

@@ -179,7 +179,7 @@ function App() {
     try {
       const result = checkout.open({
         sessionId,
-        checkoutUrl: 'http://localhost:5173/',
+        checkoutUrl: 'https://checkout-page-eta.vercel.app/',
         mode: 'iframe',
         width: 620,
         height: 860,
